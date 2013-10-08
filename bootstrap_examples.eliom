@@ -9,17 +9,15 @@ module Bootstrap_examples_app =
       let application_name = "bootstrap_examples"
     end)
 
-let main_service =
-  Eliom_service.service ~path:[] ~get_params:Eliom_parameter.unit ()
+let () =
+  Bootstrap_examples_app.register
+    ~service:Services.main_service
+    (fun () () ->
+     Pages.main_page ()
+    )
 
 let () =
   Bootstrap_examples_app.register
-    ~service:main_service
+    ~service:Services.heading_service
     (fun () () ->
-      Lwt.return
-        (Eliom_tools.F.html
-           ~title:"bootstrap_examples"
-           ~css:[["css";"bootstrap_examples.css"]]
-           Html5.F.(body [
-             h2 [pcdata "Welcome from Eliom's destillery!"];
-           ])))
+    Pages.heading_page ())
