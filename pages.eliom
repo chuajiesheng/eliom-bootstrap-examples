@@ -7,7 +7,15 @@ let page_title page_name = title ^ " - " ^ page_name
 
 let main_page () =
   let content =
-    div [h2 [pcdata "Welcome from Eliom's destillery!"]]
+    div [
+        div ~a:[Bootstrap.row] [
+              div ~a:[Bootstrap.span 12] [
+                    h2 [pcdata "Welcome from Eliom Bootstrap Examples!"]]];
+        div ~a:[Bootstrap.row] [
+              div ~a:[Bootstrap.span 11; Bootstrap.offset 1] [
+              h4 [pcdata "Examples"]]]
+
+      ]
   in
   Document.create_page_v232 (page_title "Main") content
 
