@@ -13,7 +13,9 @@ let main_page () =
                     h2 [pcdata "Welcome from Eliom Bootstrap Examples!"]]];
         div ~a:[Bootstrap.row] [
               div ~a:[Bootstrap.span 11; Bootstrap.offset 1] [
-              h4 [pcdata "Examples"]]]
+                    h4 [pcdata "Examples"];
+                    ul [li [a Services.heading_service [pcdata "Headings"] ()]]
+            ]]
 
       ]
   in
