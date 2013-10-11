@@ -3,3 +3,6 @@ let main_service =
 
 let heading_service =
   Eliom_service.service ~path:["heading"] ~get_params:Eliom_parameter.unit ()
+
+let grid_service =
+  Eliom_service.service ~path:["grid"] ~get_params:Eliom_parameter.unit ()
