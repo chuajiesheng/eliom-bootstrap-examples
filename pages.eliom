@@ -14,7 +14,10 @@ let main_page () =
         div ~a:[Bootstrap.row] [
               div ~a:[Bootstrap.span 11; Bootstrap.offset 1] [
                     h4 [pcdata "Examples"];
-                    ul [li [a Services.heading_service [pcdata "Headings"] ()]]
+                    ul [
+                        li [a Services.heading_service [pcdata "Headings"] ()];
+                        li [a Services.grid_service [pcdata "Grid System"] ()]
+                      ]
             ]]
 
       ]
@@ -33,3 +36,10 @@ let heading_page () =
       ]
   in
   Document.create_page_v232 (page_title "Headings") content
+
+let grid_page () =
+  let content =
+    div ~a:[Bootstrap.row] [
+          div ~a:[Bootstrap.span 1] [pcdata "1"];
+        ] in
+  Document.create_page_v232 (page_title "Grid") content

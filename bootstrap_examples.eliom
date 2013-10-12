@@ -21,3 +21,9 @@ let () =
     ~service:Services.heading_service
     (fun () () ->
     Pages.heading_page ())
+
+let () =
+  Bootstrap_examples_app.register
+    ~service:Services.grid_service
+    (fun () () ->
+     Pages.grid_page ())
