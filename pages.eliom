@@ -40,6 +40,30 @@ let heading_page () =
 let grid_page () =
   let content =
     div ~a:[Bootstrap.row] [
-          div ~a:[Bootstrap.span 1] [pcdata "1"];
+          div ~a:[Bootstrap.span 12] [
+                div ~a:[Bootstrap.row] [
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"]
+                    ];
+                div ~a:[Bootstrap.row] [
+                      div ~a:[Bootstrap.span 2] [pcdata "2"];
+                      div ~a:[Bootstrap.span 3] [pcdata "3"];
+                      div ~a:[Bootstrap.span 4] [pcdata "4"]
+                    ];
+                div ~a:[Bootstrap.row] [
+                          div ~a:[Bootstrap.span 4] [pcdata "4"];
+                          div ~a:[Bootstrap.span 5] [pcdata "5"]
+                    ];
+                div ~a:[Bootstrap.row] [
+                      div ~a:[Bootstrap.span 9] [pcdata "9"];
+                    ]
+              ]
         ] in
   Document.create_page_v232 (page_title "Grid") content
