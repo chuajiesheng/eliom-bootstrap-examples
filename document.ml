@@ -48,7 +48,7 @@ let create_page_v232 mytitle mycontent =
   Lwt.return
     (html
        (head (title (pcdata mytitle))
-             [Uri.JQuery.Min.v2; Uri.Css.Min.v232; Uri.Js.Min.v232])
+             [Uri.JQuery.Min.v2; Uri.Css.Min.v232; Uri.Docs.v232; Uri.Js.Min.v232])
        (body (inverse_navbar_v2::[mycontent])))
 
 
