@@ -50,19 +50,29 @@ let grid_page () =
                       div ~a:[Bootstrap.span 1] [pcdata "1"];
                       div ~a:[Bootstrap.span 1] [pcdata "1"];
                       div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
+                      div ~a:[Bootstrap.span 1] [pcdata "1"];
                       div ~a:[Bootstrap.span 1] [pcdata "1"]
                     ];
                 div ~a:[Bootstrap.row; Bootstrap.Example.show_grid] [
                       div ~a:[Bootstrap.span 2] [pcdata "2"];
                       div ~a:[Bootstrap.span 3] [pcdata "3"];
+                      div ~a:[Bootstrap.span 3] [pcdata "3"];
                       div ~a:[Bootstrap.span 4] [pcdata "4"]
                     ];
                 div ~a:[Bootstrap.row; Bootstrap.Example.show_grid] [
-                          div ~a:[Bootstrap.span 4] [pcdata "4"];
-                          div ~a:[Bootstrap.span 5] [pcdata "5"]
+                      div ~a:[Bootstrap.span 3] [pcdata "3"];
+                      div ~a:[Bootstrap.span 4] [pcdata "4"];
+                      div ~a:[Bootstrap.span 5] [pcdata "5"]
                     ];
-                div ~a:[Bootstrap.row] [
-                      div ~a:[Bootstrap.span 9] [pcdata "9"];
+                div ~a:[Bootstrap.row; Bootstrap.Example.show_grid] [
+                      div ~a:[Bootstrap.span 4] [pcdata "4"];
+                      div ~a:[Bootstrap.span 8] [pcdata "8"]
+                    ];
+                div ~a:[Bootstrap.row; Bootstrap.Example.show_grid] [
+                      div ~a:[Bootstrap.span 5] [pcdata "5"];
+                      div ~a:[Bootstrap.span 7] [pcdata "7"]
                     ]
               ]
         ] in
